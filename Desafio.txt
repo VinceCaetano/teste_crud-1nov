@@ -1,0 +1,32 @@
+Requisitos
+
+    Configuração do Banco de Dados
+        Utilizar o Laravel artisan migrate para criar as tabelas necessárias no banco de dados.
+
+    CRUD de Produtos
+        Desenvolver as operações básicas de um CRUD para produtos:
+            Create (POST /api/products): Cadastrar um novo produto.
+            Read (GET /api/products/{id}): Visualizar os detalhes de um produto específico.
+            Update (PUT /api/products/{id}): Atualizar os dados de um produto.
+            Delete (DELETE /api/products/{id}): Excluir um produto.
+        O produto deve ter os seguintes atributos:
+            Nome (obrigatório)
+            Descrição (opcional)
+            Preço (obrigatório, numérico e positivo)
+            Quantidade em Estoque (opcional)
+
+    Autenticação com Bearer Token
+        Configurar autenticação utilizando tokens Bearer para proteger as rotas da API.
+        O token deve ser obrigatório para acessar as rotas de produtos.
+        Implementar endpoints para registro e login de usuários, retornando o token de autenticação.
+
+    Paginação e Filtro na Listagem de Produtos
+        Implementar a listagem de produtos com paginação (ex: 10 produtos por página).
+        Adicionar filtros para os campos:
+            Nome
+            Preço (ex.: mínimo e máximo)
+            Descrição (busca por palavras-chave)
+
+    Testes Unitários
+        Implementar testes unitários para validar o funcionamento da autenticação com token Bearer, verificando o acesso negado em caso de ausência ou invalidez do token.
+        Incluir testes básicos para as operações de CRUD do produto.
